@@ -62,7 +62,7 @@ int main()
     countHoursInYear = countDays_2000_Year * countHoursInDay;
     cout << "countHoursInYear - " << countHoursInYear << "hours" << endl;
 
-    /*
+    
     float discount = 0.05;
     float cost = 30.99;
     int count = 4;
@@ -76,7 +76,7 @@ int main()
     float price = cost * count - cost * count * discount;
 
     cout << "You need to pay : " << price << "grn" << endl;
-    */
+    
     //enter from keyboard
     // 
     //Ctrl+K+C - comment code
