@@ -4,12 +4,44 @@ using namespace std;
 
 int main()
 {
+    //1.......10
+
+    //створити лічильника
+    int i = 1;
+    while (i <= 10)//лічильник треба використати в умові
+    {
+        cout << i << " ";
+        i++;// i = i + 1 //лічильник треба змінювати
+    }
+    cout << endl;
+
+
+    //1.......10
+    int counter = 1;
+    do
+    {
+        cout << counter << " ";
+        counter++;
+
+    } while (counter <= 10);
+
+    cout << endl;
+
+    for (int i = 1; i <= 10; i++)
+    {
+        cout << i << " ";
+    }
+
+
+
+
+
     //Помилка на етапі компіляції — помилка синтаксису мови програмування.
     //Помилка на етапі виконання 
     //F10 - start debuger
     //F9 - break pointer
     //F5 - quick start program and stop by break point
-    int a = 0, b = 0;
+   /* int a = 0, b = 0;
     cout << "Enter a : "; cin >> a;
     cout << "Enter b : "; cin >> b;
     int res = a / b;
@@ -18,7 +50,7 @@ int main()
     for (int i = 0; i < 500; i++)
     {
         cout << i << " ";
-    }
+    }*/
     /*
     int C = 10;
     for (int i = 0; i < C; i++)
