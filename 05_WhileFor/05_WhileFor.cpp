@@ -16,6 +16,7 @@ int main()
 		■ Цикл з передумовою (while);
 		■ Цикл з постумовою (do...while);
 		■ Цикл з параметрами (for).*/
+	
 
 	int counter = 1;//1 - create counter
 	while (counter <= 7)//2 - use counter in expresion
