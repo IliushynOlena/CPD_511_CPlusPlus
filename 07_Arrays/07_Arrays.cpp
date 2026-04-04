@@ -4,23 +4,24 @@ using namespace std;
 
 int main()
 {
-    //int mark1 = 5;
-    //int mark2 = 5;
-    //int mark3 = 5;
-    //int mark4 = 5;
-    //int mark5 = 5;
+  /*  int mark1 = 5;
+    int mark2 = 5;
+    int mark3 = 5;
+    int mark4 = 5;
+    int mark5 = 5;*/
+
     ////Масив — це набір однотипних даних, об'єднаний загальним ім'ям.
-    //int train[3];
-    //train[0] = 5;
-    //train[1] = 10;
-    //train[2] = 3;
+   /* int train[3];
+    train[0] = 5;
+    train[1] = 10;
+    train[2] = 3;
 
-    //cout << train[0] << endl;
-    //cout << train[1] << endl;
-    //cout << train[2] << endl;
-    //cout << train[3] << endl;
-    //cout << train[23] << endl;
-
+    cout << train[0] << endl;
+    cout << train[1] << endl;
+    cout << train[2] << endl;
+    cout << train[5] << endl;
+    cout << train[230] << endl;*/
+   
     int arr[5];
     for (int i = 0; i < 5; i++)
     {
@@ -50,7 +51,7 @@ int main()
     }
     cout << endl;
 
-    int arr3[] = { 5,4,3,2,1 };
+    int arr3[]= { 5,4,3,2,1 ,5,8,9,6,7,4,15,66 };
     for (int i = 0; i < 5; i++)
     {
         cout << arr3[i] << " ";
@@ -59,22 +60,22 @@ int main()
 
     //Другий спосіб — ініціалізація масиву за допомогою циклу.
     const int SIZE = 5;
-    int arr4[SIZE];
-    //for (int i = 0; i < SIZE; i++)
-    //{
-    //    //arr4[i] = i; 
-    //    cout << arr4[i] << " ";
-    //}
-    //for (int i = 0; i < SIZE; i++)
-    //{
-    //    cout << "Enter " << i + 1 << " element : ";
-    //    cin>> arr4[i];
-    //}
+    int arr4[SIZE]{};
+    for (int i = 0; i < SIZE; i++)
+    {
+        //arr4[i] = i; 
+        cout << arr4[i] << " ";
+    }
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << "Enter " << i + 1 << " element : ";
+        cin>> arr4[i];
+    }
 
-    //for (int i = 0; i < SIZE; i++)
-    //{
-    //    cout << arr4[i] << " ";
-    //}
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << arr4[i] << " ";
+    }
 
     //Написати програму, яка знаходить суму всіх від'ємних значень у масиві.
     //Написати програму, яка знаходить мінімальне й 
