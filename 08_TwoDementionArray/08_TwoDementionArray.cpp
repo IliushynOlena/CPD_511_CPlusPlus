@@ -55,6 +55,7 @@ int main()
         arr[i] = rand() % 100;
         cout << arr[i] << " ";
     }*/
+    /*
     int arr1[2][2] = { {1,1},{2,2}};
     int arr2[2][2] = { 1,2,3,4 };
     int arr3[3][3] = { {1,2},{3,4,5} };
@@ -90,6 +91,26 @@ int main()
         }
         cout << "Max element " << i << " row = " << max << endl;
     }
+    */
+
+   // 1.Дано масив розміром 4×3 з елементами цілого типу.
+    //    Визначити кількість елементів відмінних від нуля.
+    const int row = 4;
+    const int col =3;
+    int arr[row][col];
+    int count_not_zero = 0;
+    for (int i = 0; i < row; i++)
+    { 
+        for (int j = 0; j < col; j++)
+        {
+            arr[i][j] = rand() % 5;
+            cout << arr[i][j] << " ";
+            if (arr[i][j] != 0)
+                count_not_zero++;
+        }
+        cout << endl;
+    }
+    cout << "Count number not zero = " << count_not_zero << endl;
 
 
 }
