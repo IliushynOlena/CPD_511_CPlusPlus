@@ -34,10 +34,10 @@ int Pow(int number, int step)
 }
 int Max(int a, int b)
 {
-	/*if (a > b)
+	if (a > b)
 		return a;
 	else
-		return b;*/
+		return b;
 	//тернарний оператор
 	return (a > b) ? a : b;// ? :
 
@@ -45,19 +45,18 @@ int Max(int a, int b)
 int Min(int a, int b)
 {
 	return (a < b) ? a : b;
-
 }
 void Second()
 {
 	cout << "Second function some text" << endl;
 }
 void First()
-{
+{	
 	cout << "First function some text" << endl;
 	Second();
 	cout << "First function some text" << endl;
-	
 }
+
 
 int main()
 {
