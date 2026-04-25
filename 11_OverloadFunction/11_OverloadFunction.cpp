@@ -46,6 +46,14 @@ T max_element(T arr[], int size)
 	}
 	return max;
 }
+template<typename T1, typename T2>
+T2 Max(T1 a, T2 b)
+{
+	/*if (a > b) return a;
+	else return b;*/
+
+	return (a > b) ? a : b;
+}
 // 
 //перевантаження по кількості аргументів
 double multy(double x)
@@ -66,6 +74,8 @@ double multy(double x, double y, double z)
 //}
 int main()
 {
+
+	cout << "Max = " << Max(10.25, 3.33) << endl;
 #pragma region  Перевантаження функцій
 	/*cout << "Multy : " << multy(5) << endl;
 	cout << "Multy : " << multy(5,8) << endl;
@@ -80,7 +90,7 @@ int main()
 	float f[] = { 1.11,2.22,3.33,4.44,5.55, 7,77 };
 	cout << "Max element : " << max_element(f, 6) << endl;
 	string colors[] = { "red", "green", "blue", "pink", "cyan", "white"};
-	cout << "Max element : " << max_element(colors, 6) << endl;
+	//cout << "Max element : " << max_element(colors, 6) << endl;
 #pragma endregion
 
 }
