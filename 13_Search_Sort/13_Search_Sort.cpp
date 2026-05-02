@@ -56,7 +56,7 @@ void BubleSort(int arr[], int size)
 
 	for (int i = 0; i < size; i++)//20
 	{
-		for (int j = size-1; j > i; j--)
+		for (int j = size-1; j > i; j--)//20
 		{
 			if (arr[j - 1] > arr[j])
 			{
