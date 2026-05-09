@@ -53,6 +53,7 @@ int main()
 	cout << (char)219 << endl;
 
 
+	int a;
 
 }
 
