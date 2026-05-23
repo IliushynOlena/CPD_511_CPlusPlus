@@ -13,22 +13,30 @@ int main()
 {
 	Product pr{ "Laptop",25000,true };
 	ofstream out("laptop.txt");
+
+	//записуємо текстово структуру в файл
 	out << pr.name << "\n" << pr.price << "\n" << pr.isInStoke << endl;
 	out.close();
 
 	Product read;
+	//читаємо структу текстово з файлу
 	/*ifstream file_in("laptop.txt");
 	file_in >> read.name;
 	file_in >> read.price;
 	file_in >> read.isInStoke;
 	cout << "Read : " << read.name << " " << read.price << " " << read.isInStoke << endl;*/
+	
 	//Binary read and write
+	//при бінарному записі обов*язково вказуємо режим  ios_base::out | ios_base::binary
 	ofstream binary_out("binary.bin", ios_base::out | ios_base::binary);
+	//метод write((char*)&pr, sizeof(pr)) пише тільки чарові масиви
+	//тому треба робити конвертацію
 	binary_out.write((char*)&pr, sizeof(pr));
 	binary_out.close();
 
-
+	//при бінарному зчитуванні обов*язково вказуємо режим  ios_base::in | ios_base::binary
 	ifstream binary_in("binary.bin", ios_base::in | ios_base::binary);
+	//метод read((char*)&read, sizeof(read)) читає тільки чарові масиви
 	binary_in.read((char*)&read, sizeof(read));
 	binary_in.close();
 	cout << "Read : " << read.name << " " << read.price << " " << read.isInStoke << endl;
