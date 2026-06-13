@@ -37,24 +37,7 @@ private:
 		average = (float)sum / markCount;
 	}
 public:
-	Student()
-	{
-		cout << "Default constructor" << endl;
-		name = "no name";
-		lastname = "no lastname";
-		surname = "no surname";
-		birthdate = "no birthdate";
-		phone = "no phone";
-		city = "no city";
-		country = "no country";
-		university = "no university";
-		university_city = "no university city";
-		university_country = "no university country";
-		group = "no group";
-		marks = nullptr;
-		markCount = 0;
-		average = 0;
-	}
+	Student();//prototype of method
 	Student(string name, string last, string surname)
 	{
 		cout << "Parametrized constructor" << endl;
@@ -115,27 +98,7 @@ public:
 	{
 		return surname;
 	}
-	void Print()
-	{
-		cout << "Name : " << name << endl;
-		cout << "Last Name : " << lastname << endl;
-		cout << "SurName : " << surname << endl;
-		cout << "Birthdate : " << birthdate << endl;
-		cout << "Phone : " << phone << endl;
-		cout << "City : " << city << endl;
-		cout << "Country : " << country << endl;
-		cout << "university : " << university << endl;
-		cout << "university city: " << university_city << endl;
-		cout << "university country : " << university_country << endl;
-		cout << "Group : " << group << endl;
-		cout << "Marks : ";
-		for (int i = 0; i < markCount; i++)
-		{
-			cout << marks[i] << " ";
-		}
-		cout << "\nAverage mark : " << average << endl;
-		cout << endl << "===================================================" << endl;
-	}
+	void Print();
 	void Input()
 	{
 		cout << "Enter Name : "; cin>> name ;
@@ -220,3 +183,43 @@ int main()
 
 }
 
+Student::Student()
+{
+	cout << "Default constructor" << endl;
+	name = "no name";
+	lastname = "no lastname";
+	surname = "no surname";
+	birthdate = "no birthdate";
+	phone = "no phone";
+	city = "no city";
+	country = "no country";
+	university = "no university";
+	university_city = "no university city";
+	university_country = "no university country";
+	group = "no group";
+	marks = nullptr;
+	markCount = 0;
+	average = 0;
+}
+
+void Student::Print()
+{
+	cout << "Name : " << name << endl;
+	cout << "Last Name : " << lastname << endl;
+	cout << "SurName : " << surname << endl;
+	cout << "Birthdate : " << birthdate << endl;
+	cout << "Phone : " << phone << endl;
+	cout << "City : " << city << endl;
+	cout << "Country : " << country << endl;
+	cout << "university : " << university << endl;
+	cout << "university city: " << university_city << endl;
+	cout << "university country : " << university_country << endl;
+	cout << "Group : " << group << endl;
+	cout << "Marks : ";
+	for (int i = 0; i < markCount; i++)
+	{
+		cout << marks[i] << " ";
+	}
+	cout << "\nAverage mark : " << average << endl;
+	cout << endl << "===================================================" << endl;
+}
