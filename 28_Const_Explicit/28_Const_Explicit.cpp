@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class EventDay {
@@ -41,9 +42,9 @@ public:
 	{
 		return summ * rate / 100;
 	}
-	double getSum() 
-	{ 
-		return summ; 
+	double getSum()
+	{
+		return summ;
 	}
 	double getSum()const
 	{
@@ -58,17 +59,19 @@ public:
 };
 
 void doSomething(long number)
-{ }
+{
+}
 float doSomething() { return 10.0; }// double -> float  implicit
 
 class Array {
 	int* arr;
 	int size;
 public:
-	explicit Array(int size = 10) 
+	explicit Array(int size = 10)
 	{
 		this->size = size;
 		arr = new int[size];
+		arr[0];
 	}
 	~Array()
 	{
@@ -89,9 +92,46 @@ public:
 	void display(int index) const {
 		cout << arr[index] << " ";
 	}
+	int getOneElement(int index)
+	{
+		if (index < 0 || index >= size) return 0;
+		else return arr[index];
+	}
+	int operator[](int index)
+	{
+		if (index < 0 || index >= size) return 0;
+		else return arr[index];
+	}
+	void changeAllElement(int number)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			arr[i] += number;
+		}
+	}
+	void operator()(int number)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			arr[i] += number;
+		}
+	}
+	void operator()(int number, int index)
+	{
+		arr[index] += number;
+	}
+	operator string()
+	{
+		string res = "";
+		for (int i = 0; i < size; i++)
+		{
+			res += to_string(arr[i]) + " * ";
+		}
+		return res;
+	}
 };
 
-void ShowAllArray(const Array &arr)
+void ShowAllArray(const Array& arr)
 {
 	for (int i = 0; i < arr.getSize(); i++)
 	{
@@ -103,19 +143,30 @@ int main()
 {
 	srand(time(0));
 
-	Array arr(15);
-	for (int i = 0; i < arr.getSize(); i++)
+	Array myarr(15);
+	for (int i = 0; i < myarr.getSize(); i++)
 	{
-		arr.setValue(rand()%15, i);
+		myarr.setValue(rand() % 15, i);
 	}
 
-	ShowAllArray(arr);
+	ShowAllArray(myarr);
 	cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
-	ShowAllArray(5);
+	cout << myarr[0] << endl;
+	cout << myarr.getOneElement(0) << endl;
+	ShowAllArray(myarr);
+	myarr.changeAllElement(3);
+	ShowAllArray(myarr);
+	myarr(100);
+	ShowAllArray(myarr);
+	myarr(55, 0);
+	ShowAllArray(myarr);
+
+	cout << (string)myarr << endl;
+	/*ShowAllArray(5);
 
 
 	Array copy = 10;
-	ShowAllArray(copy);
+	ShowAllArray(copy);*/
 
 	//Explicit
 
