@@ -126,6 +126,12 @@ class Train
 {
     //Vagon* vagons;
     List<Vagon> vagons;
+    string mark;
+    string model;
+    string fullname;
+    int age;
+
+    int year;
     Train()
     {
         
