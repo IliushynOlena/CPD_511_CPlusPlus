@@ -22,6 +22,10 @@ public:
     virtual void Move()const {
         cout << "I am moving......" << endl;
     }
+    ~Animal()
+    {
+
+    }
 };
 class Lion : public Animal
 {
@@ -29,13 +33,15 @@ class Lion : public Animal
 public:
     Lion():runSpeed(0),Animal(){}
     Lion(string n, string p, float w, float r):runSpeed(r),Animal(n,p,w){}
-    void Move()const {
+    void Move()const override {
         cout << "I am running with speed ..."<< runSpeed << "km/h" << endl;
     }
     void MakeSound()const override {
         cout << "Rrrrrrrrrrrrr-rrrrrrrrrrrr-rrrrrrrrrrr" << endl;
     }
-   
+    ~Lion() {
+
+   }
 
 };
 
