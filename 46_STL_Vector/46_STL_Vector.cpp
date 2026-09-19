@@ -10,7 +10,7 @@ void Print(const vector<int> &v1)
     }
     cout << endl;
 }
-
+class User{};
 int main()
 {
     int number = 5;
@@ -21,6 +21,10 @@ int main()
     int* marks1 = new int[5] {11, 11, 12, 11, 10};
     delete[]marks1;
     
+    vector<int> v11;
+    vector<string> v12;
+    vector<User> v13;
+
 
     vector<int> v1 = {1,2,3,4,5,6,7,8,9,10};
     vector<int> v2 = { 20,30,40,50,60,70 };
