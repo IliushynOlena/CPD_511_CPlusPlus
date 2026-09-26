@@ -59,7 +59,6 @@ public:
     }
 
 };
-
 class Reptile: public Animal
 {
     float swimDeep;

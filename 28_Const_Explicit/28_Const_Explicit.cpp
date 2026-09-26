@@ -62,11 +62,21 @@ void doSomething(long number)
 {
 }
 float doSomething() { return 10.0; }// double -> float  implicit
-
+class MyClass
+{
+	//default constructor
+	//destructor
+	//copy constuctor
+	//operator =
+};
 class Array {
 	int* arr;
 	int size;
 public:
+	//Array() = default;//Array() {}
+	Array() = delete;//
+	//void Test() = default; -- error
+
 	explicit Array(int size = 10)
 	{
 		this->size = size;
@@ -141,9 +151,17 @@ void ShowAllArray(const Array& arr)
 }
 int main()
 {
+	// implicit    explicit
+	int Num = 3.33;
+	cout << Num << endl;//3  implicit
+	float B = 3.33;
+	cout << (int)B << endl;//3 explicit
+
+	ShowAllArray(5);
+
 	srand(time(0));
 
-	Array myarr(15);
+	Array myarr(15);//constructor
 	for (int i = 0; i < myarr.getSize(); i++)
 	{
 		myarr.setValue(rand() % 15, i);
@@ -162,7 +180,7 @@ int main()
 	ShowAllArray(myarr);
 
 	cout << (string)myarr << endl;
-	/*ShowAllArray(5);
+	
 
 
 	Array copy = 10;

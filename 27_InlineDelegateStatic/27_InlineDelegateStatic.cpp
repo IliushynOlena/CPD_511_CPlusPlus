@@ -3,6 +3,7 @@
 using namespace std;
 
 struct Point {
+public:
 	int x;
 	int y;
 };
@@ -25,14 +26,13 @@ public:
 	}
 	Human() :name("no name"), age(0), weight(0) { count_human++; }
 	//Human() :name{ "no name" }, age{ 0 }, weight{ 0 } {}
-
-	/*Human()
+	Human()
 	{
 		cout << "Deafult constructor" << endl;
 		name = "no name";
 		age = 0;
 		weight = 0;
-	}*/
+	}
 	Human(string name): Human()
 	{
 

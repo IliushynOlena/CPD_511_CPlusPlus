@@ -25,7 +25,7 @@ public:
     }
     void Print()const
     {
-        cout << " X : " << x << " . Y : " << y << endl;
+        cout << " X : " << this->x << " . Y : " << y << endl;
     }
     Point Plus(const Point& other)const
     {
@@ -170,6 +170,11 @@ class Square
 {
     int h;
     int w;
+public:
+    Square operator +(Square s1, Square s2)
+    {
+        return Square(s1.h + s2.h, s1.w + s2.w);
+    }
 };
 void Hello()
 {
@@ -186,8 +191,16 @@ void Hello2()
 
 int main()
 {
-    Point p1(5,10);
-    Point p2(3,2);
+
+    cout << 5 + 7 << endl;
+    Square s1;
+    Square s2;
+    cout << s1 + s2 << endl;
+    cout << s1 * s2 << endl;
+    cout << s1 - s2 << endl;
+    cout << s1 > s2 << endl;
+    Point p1(5,10);//this p1
+    Point p2(3,2);// this p2
 
     //ostream cout;
     //istream cin;
